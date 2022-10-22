@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/64068083/197337635-de2d253a-8fce-46a7-
 
 3. Write a JavaScript program to input two numbers and perform Arithmetic operations such as add, subtract, multiply, and divide.
 
-https://user-images.githubusercontent.com/64068083/197337635-de2d253a-8fce-46a7-87f9-1a48999d693d.mp4
+[https://user-images.githubusercontent.com/64068083/197337635-de2d253a-8fce-46a7-87f9-1a48999d693d.mp4]
 
 
 4. Input an array and implement linear search and bubble sorting technique using JavaScript.
