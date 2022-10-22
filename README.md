@@ -8,6 +8,7 @@ This readme file includes the question as well as a short video demonstrating th
 
 2. Write a JavaScript program to check whether a given number is a palindrome or not, make a small textbox to enter the number and a button to click for action. Output to be displayed as a pop up.
 
+https://user-images.githubusercontent.com/64068083/197337635-de2d253a-8fce-46a7-87f9-1a48999d693d.mp4
 
 
 3. Write a JavaScript program to input two numbers and perform Arithmetic operations such as add, subtract, multiply, and divide.
