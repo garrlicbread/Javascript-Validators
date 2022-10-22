@@ -4,7 +4,7 @@ This readme file includes the question as well as a short video demonstrating th
 
 1. Demonstrate the use of buttons and alert boxes using Javascript.
 
-[![Watch the video]()
+![Video](Javascript-Validators/Videos/Buttons_and_alert_boxes.mp4 ) 
 
 2. Write a JavaScript program to check whether a given number is a palindrome or not, make a small textbox to enter the number and a button to click for action. Output to be displayed as a pop up.
 
