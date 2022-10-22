@@ -1,0 +1,125 @@
+<!-- 4. Implementing linear searching and sorting on an array of numbers using JavaScript. -->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" href="#" />
+            <body style = "background-color: rgb(173, 130, 171); font-family: 'Roboto', sans-serif;">
+                
+                <script>
+
+                    function randomizer(){
+
+                        var data = document.getElementsByName('sarray[]');
+
+                        for (var i = 0; i < data.length; i++){
+                            data[i].value = Math.floor(Math.random() * 100);
+                        }     
+                    }
+
+                    function clearContent(){
+
+                        document.getElementById('para').innerHTML = '';
+                        document.getElementById('sorted_arr').innerHTML = '';
+                    }
+
+                    function array_finder(){
+
+                        var data = document.getElementsByName('sarray[]');
+                        var item = document.getElementById("find").value;
+                        var index = -1;
+
+                        for (var i = 0; i < data.length; i++) {
+                            if (data[i].value == item) {
+                                index = i;
+                                break
+                            }
+                        }
+                        
+                        if (index == -1){
+                            var y = "Sorry. The number " + item + " was not found in the array.";
+                        }
+
+                        else if(document.getElementById("find").value == ""){
+                            var y = "Bro.. you didn't enter anything...";
+                        }
+
+                        else {
+                            var y = "The number '" + item + "' was found at index " + (index) + " in the array.";
+                        }
+
+                        document.getElementById("para").innerHTML = y;
+                    }
+
+                    function array_sorter(){
+
+                        var arrey = document.getElementsByName('sarray[]');
+                    
+                        // console.log(arrey[3].value, arrey[4].value);
+
+                        for (var i = 0; i < arrey.length - 1; i++){
+
+                            for (var j = 0; j < (arrey.length - 1 - i); j++){
+
+                                if (arrey[j].value > arrey[j + 1].value){
+
+                                    var tempo = arrey[j].value;
+                                    arrey[j].value = arrey[j + 1].value;
+                                    arrey[j + 1].value = tempo;
+
+                                }
+                            }
+                        }
+
+                        var x = "The original array has been replaced by the sorted array :)";
+                        
+                        document.getElementById("sorted_arr").innerHTML = x;
+                    }
+
+                </script>
+
+                <h1 style = "color: brown; text-align: center">Hello! Welcome to array finder and sorter :]</h1>
+                <h2 style = "color: azure; text-align: center;" id = "array_elements">Enter elements of the array below:</h2>
+                
+                <form name = "ops" class = "array_class" action = "index.html" method = "post" style = "text-align: center;">
+                    0. <input type = "text" name = "sarray[]" value = "" /><br>
+                    1. <input type = "text" name = "sarray[]" value = "" /><br>
+                    2. <input type = "text" name = "sarray[]" value = "" /><br>
+                    3. <input type = "text" name = "sarray[]" value = "" /><br>
+                    4. <input type = "text" name = "sarray[]" value = "" /><br>
+                    5. <input type = "text" name = "sarray[]" value = "" /><br>
+                    6. <input type = "text" name = "sarray[]" value = "" /><br>
+                    7. <input type = "text" name = "sarray[]" value = "" /><br>
+                    8. <input type = "text" name = "sarray[]" value = "" /><br>
+                    9. <input type = "text" name = "sarray[]" value = "" /><br><br>
+
+                    <h3 style = "color: azure"> 
+                        Enter Number: <input type = "text" name = "find" id = "find" value = "">
+                    </h3><br>
+                    
+                    <button type = "button" name = "btn" onclick = "array_finder()">Find Element</button>
+                    <button type = "button" name = "btn" onclick = "array_sorter()">Sort Array</button>
+                    <button type = "button" name = "btn" onclick = "randomizer()">Randomize</button>
+                    <input type = "reset" onclick = "clearContent()"><br>
+
+                </form>
+
+                <p id = "para" style = "text-align : center; color: blanchedalmond;"></p>
+                <p id = "sorted_arr" style = "text-align : center; color: blanchedalmond;"></p>
+                <p id = "demo" style = "text-align : center; color: blanchedalmond;"></p>
+            
+            </body>
+        </head>
+</html>
+
+                        
+<!-- Demo checking how to replace values in an array
+
+ console.log(arrey[3].value, arrey[4].value);
+
+ if (arrey[1].value > arrey[2].value){
+    var temp = arrey[1].value;
+    arrey[1].value = arrey[2].value;
+    arrey[2].value = temp;
+}
+console.log(temp) --> 

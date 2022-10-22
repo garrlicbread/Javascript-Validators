@@ -1,0 +1,41 @@
+<!-- 2. Write a JavaScript program to check whether a given number is palindrome -->
+
+<html>
+    <head>
+        <script>
+        
+        function pals(){
+            
+            // Declaring input
+            var inpuut = document.getElementById("input").value;
+
+            // Converting string or numbers to an array
+            var arraay = inpuut.split('');
+
+            // Reversing the array
+            var arraay_reverse = arraay.reverse();
+
+            // Converting the reversed array into string
+            var reverse_str = arraay_reverse.join('');
+
+            if (inpuut == reverse_str){
+                alert("Yes!! It's a palindrome wow bruh... ^_^");
+            }
+
+            else{
+                alert("Oh no.... sorry it's not a palindrome :[");
+            }
+        }
+
+        </script>
+    </head>
+
+    <body style="background-color: rgb(146, 197, 186); font-family: 'Roboto', sans-serif;">
+        <h1 align = "center">Palindrome Checker!! :)</h1>
+        <form style = "text-align: center"> 
+            <label for = "input"></label>Enter a string or a number: <!-- Writing a message that will be displayed beside the empty input box -->
+            <input type = "text" id = "input" name = "input"><br><br> <!-- Specifying what type of input to expect. Since it is simple text, it'll be an empty box -->            
+            <input type = "submit" value = "Check For Palindrome" onclick = "pals()"> <!-- Creating a submit button that will display a custom message -->
+        </form> 
+    </body>
+</html>

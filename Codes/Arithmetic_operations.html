@@ -1,0 +1,61 @@
+<!-- 3. Performing arithmetic functions on a website. -->
+
+<html>
+    
+    <head>
+        <script>
+
+        function add(x, y){
+            
+            const c = x + y;
+            document.ops.result.value = c;
+           
+        }
+
+        function sub(x, y){
+            
+            const c = x - y;
+            document.ops.result.value = c;
+        }
+
+        function mul(x, y){
+            
+            const c = x * y;
+            document.ops.result.value = c;
+        }
+
+        function divd(x, y){
+            
+            const c = x / y;
+            document.ops.result.value = c;
+        }
+
+        </script>
+    </head>
+
+    <body style = "background-color: rgb(222, 89, 89); font-family: 'Roboto', sans-serif;">
+        <h1 align = "center">Arithmetic Operations :)</h1>
+
+        <form style = "text-align: center;" name = "ops"> 
+            <label for = "input1"></label>Enter number 1: <!-- Writing a message that will be displayed beside the empty input box -->
+            <input type = "number" id = "input1" name = "input1"><br><br> <!-- Specifying what type of input to expect. Since it is simple text, it'll be an empty box -->            
+            
+            <label for = "input2"></label>Enter number 2: 
+            <input type = "number" id = "input2" name = "input2"><br><br> 
+
+            <input type = "Button" id = "1" value = "Add" onclick = "add(+document.getElementById('input1').value, +document.getElementById('input2').value)"> 
+            <input type = "Button" id = "2" value = "Subtract" onclick = "sub(+document.getElementById('input1').value, +document.getElementById('input2').value)"> 
+            <input type = "Button" id = "3" value = "Mulitiply" onclick = "mul(+document.getElementById('input1').value, +document.getElementById('input2').value)"> 
+            <input type = "Button" id = "4" value = "Divide" onclick = "divd(+document.getElementById('input1').value, +document.getElementById('input2').value)">
+            <input type = "reset"> <br> 
+
+            <!-- Answer-->
+            <h3>
+                Result is:  
+                <input type = "text" name = "result">
+            </h3>
+
+            
+        </form>
+    </body>
+</html>

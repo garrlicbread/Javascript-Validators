@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="#" />
+
+        <style>
+
+            .h1 {
+                position: absolute;
+                left: 390px;
+                text-align: center; 
+                border: 5px double rosybrown; 
+                border-radius: 5px; 
+                width: 54%;
+            }
+
+            .button {
+                border: none;
+                color: black;
+                padding: 20px 35px;
+                text-align: center;
+            }
+            
+            .button {
+                border-radius: 15%;
+                background-color: darkcyan;
+            }
+
+            .button:hover {
+                background-color: darkturquoise;
+            }
+
+            .button:focus {
+                background-color: darkturquoise;
+            }
+
+            .send {
+                color: black;
+                background-color: peachpuff;
+                padding: 10px 30px;
+                text-align: start;
+                margin-left: 20.5%;
+                margin-right: 20.5%;
+                font-size: 20px;
+                border: solid beige;
+                border-radius: 7.5%;
+            }
+
+            .type1:hover {
+                border: solid mistyrose;
+                background-color: turquoise;
+            }
+
+            .type2:hover {
+                border: solid pink;
+                background-color: rgba(139, 0, 0, 0.703);
+            }
+        </style>
+
+        <body style = "background-color: beige; font-family: 'Roboto', sans-serif;">
+
+            
+            <h1 class = "h1">Registration Form</h1><br><br><br><br>
+        
+            <form style = "text-align: center;">
+                <h3 id = "h3name" style = "width: 49%;">Name: </h3>
+                <input id = "name" size = "150" style = "border: 1.5px solid rosybrown"></input>           
+                
+                <h3 style = "width: 50.5%;">Address: </h3>
+                <input id = "address" size = "150" style = "border: 1.5px solid rosybrown"></input>           
+                
+                <h3 style = "width: 53.7%;">Email Address: </h3>
+                <input id = "email" size = "150" style = "border: 1.5px solid rosybrown"></input>           
+                
+                <h3 style = "width: 51.4%;">Password: </h3>
+                <input type = "password" size = "150" id = "pass" rows = "1" cols = "100" style = "border: 1.5px solid rosybrown;"></input>           
+                
+                <h3 style = "width: 55.3%;">Retype Password: </h3>
+                <input type = "password" size = "150" id = "retyped_pass" rows = "1" cols = "100" style = "border: 1.5px solid rosybrown"></input>
+                
+                <h3 style = "width: 54%;">Phone Number: </h3>
+                <input id = "numb" size = "150" style = "border: 1.5px solid rosybrown"></input><br><br>
+                
+                <h3>Select your course </h3>
+                <button class = "button button" type = "button" id = "btech">B. Tech</button>
+                <button class = "button button" type = "button" id = "bca">BCA</button>
+                <button class = "button button" type = "button" id = "bcom">B. Com</button>
+                <button class = "button button" type = "button" id = "mtech">M. Tech</button>
+                <button class = "button button" type = "button" id = "mca">MCA</button>
+                <button class = "button button" type = "button" id = "mcom">M. Com</button><br><br><br><br>
+                
+                <button class = "send type1" type = "button" value = "Submit" name = "submit" onclick = "validation()">Send</button>
+                <input class = "send type2" type = "reset">
+            </form>
+        
+            <script>
+
+                function validation(){
+
+                    function digit_checker(x){      // function that checks if a string contains numbers
+                            return /\d/.test(x); 
+                        } 
+
+                    function name_checker(){        // checking if name includes any numbers
+
+                        var name = document.getElementById("name").value;
+
+                        if (name == ""){
+                            alert("Please don't leave the name field blank.");
+                            document.getElementById("name").style.border = "2px solid red";
+                            return false;
+                        }
+
+                        else if (digit_checker(name)){
+                            alert("Name: Please enter only text.")
+                            document.getElementById("name").style.border = "2px solid red";
+                            return false;
+                        }
+
+                        else{
+                            document.getElementById("name").style.border = "1.5px solid rosybrown";
+                            return true;
+                        }
+                    }
+
+                    function password_checker(){    // function that checks if password is of the desired length 
+
+                        var pass = document.getElementById("pass").value;
+
+                        if (pass == ""){
+                            alert("Please don't leave the password fields blank.");
+                            document.getElementById("pass").style.border = "2px solid red";
+                            document.getElementById("retyped_pass").style.border = "2px solid red";
+                            return false;
+                        }
+
+                        else if (pass.length >= 6){
+                            document.getElementById("pass").style.border = "1.5px solid rosybrown";
+                            return true;
+                        }
+
+                        else {
+                            alert("Password must be at least 6 characters long")
+                            document.getElementById("pass").style.border = "2px solid red";
+                            return false;
+                        }
+                    }
+
+                    function password_matcher(){    // function that validates password
+
+                        var pass = document.getElementById("pass").value;
+                        var pass2 = document.getElementById("retyped_pass").value;
+
+                        if (pass2 == ""){
+                            alert("Please retype your password.");
+                            document.getElementById("retyped_pass").style.border = "2px solid red";
+                            return false;
+                        }
+
+                        else if (pass == pass2){
+                            document.getElementById("retyped_pass").style.border = "1.5px solid rosybrown";
+                            return true;
+                        }
+
+                        else{
+                            alert("Passwords do not match");
+                            document.getElementById("retyped_pass").style.border = "2px solid red";
+                        }
+                        
+                    }
+
+                    function number_checker(){
+
+                        var number = document.getElementById("numb").value;
+
+                        let bruh = /^\d+$/.test(number); // test if string contains only numbers
+                        
+                        if (number == ""){
+                            alert("Please enter your phone number.");
+                            document.getElementById("numb").style.border = "2px solid red";
+                            return false;
+                        }
+
+                        else if (number.length != 10){
+                            alert("Phone Number: Please enter 10 characters");
+                            document.getElementById("numb").style.border = "2px solid red";
+                            return false;
+                        }
+
+                        else{
+
+                            if (bruh) {
+                                document.getElementById("numb").style.border = "1.5px solid rosybrown";
+                                return true;
+                            }
+
+                            else {
+                                alert("Number: Please enter only numbers");
+                                document.getElementById("numb").style.border = "2px solid red";
+                                return false;
+                            }
+
+                        }
+
+                    }
+
+                    if (name_checker() && password_checker() && password_matcher() && number_checker()){
+                        window.open("successfull_form.html", "_self");
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>

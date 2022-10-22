@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="#" />
+
+        <body style = "background-color: rgb(91, 131, 138); font-family: 'Roboto', sans-serif;">
+
+            <h1 style = "text-align: center;">Hey, let me find the longest word in a sentence  for you! <.<</h1>
+            <h2 style = "text-align: center;">Go ahead and type a sentence in the box below. >.></h1>
+            
+            <form style = "text-align: center;">
+                <textarea id = "sentence" rows = "3" cols = "50"></textarea><br><br>
+                <button type = "button" value = "Submit" name = "submit" onclick = "size_checker()">Check</button>
+                <input type = "reset" onclick = "para_clearer()">
+            </form>
+
+            <p id = "result_para" style = "text-align : center; color: rgb(153, 219, 151);"></p>
+
+            <script>
+
+                function para_clearer() {
+                    document.getElementById("result_para").innerHTML = "";
+                }
+
+                function size_checker() {
+
+                    var sent = document.getElementById("sentence").value;
+                    var longest = 0;
+                    var words = sent.split(" ");
+
+                    for (var i = 0; i < words.length; i++) {
+                        if (words[i].length > words[longest].length) {
+                            longest = i;
+                        }
+                    }
+
+                    if (sent == '') {
+                        var message = "You haven't entered anything... what do you want me to check?"
+                        document.getElementById("result_para").innerHTML = message;
+                    }
+
+                    else {
+                        var message = "The longest word in the sentence is " + words[longest]+ ". It can be found at index " + (longest + 1) + " in the sentence.";
+                        document.getElementById("result_para").innerHTML = message;
+                    }
+
+                }
+            </script>
+        </body>
+    </head>
+</html>

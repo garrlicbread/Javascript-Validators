@@ -1,0 +1,72 @@
+<!-- 1. JavaScript program to demonstrate the use of buttons and alert box -->
+
+<!DOCTYPE html>
+<html>
+    <body style = "background-color: rgb(146, 167, 197); font-family: 'Roboto', sans-serif">
+        
+        <h1 align = "center">Let me show you how to use buttons and alert boxes :)</h1>
+        <h2 align = "center">Enter any letter from A to Z in the box below.</h2>
+        
+        <p align = "center">
+            <input id = "vals" type = "text">
+        </p>
+        
+        <script>
+            
+            function chimp(){
+                
+                var letter = document.getElementById("vals").value;
+                var lett = letter.toLowerCase();
+
+                const dicti = {
+                    A: "Apple",
+                    B: "Ball", 
+                    C: "Cat",
+                    D: "Doll",
+                    E: "Egg",
+                    F: "Frog",
+                    G: "Glass", 
+                    H: "Hat",
+                    I: "Igloo",
+                    J: "Jam",
+                    K: "Kitty",
+                    L: "Lamb",
+                    M: "Men",
+                    N: "Net",
+                    O: "Onion",
+                    P: "Pen",
+                    Q: "Queen",
+                    R: "Roti",
+                    S: "Sukant",
+                    T: "Train",
+                    U: "Umbrella",
+                    V: "Van",
+                    W: "Watch",
+                    X: "Xylophone",
+                    Y: "Yacht",
+                    Z: "Zebra"
+                };
+
+                Object.defineProperty(dicti, 'address', {
+                    value: "India",
+                    configurable: true,
+                    writable: false,
+                    enumerable: false,
+                });
+
+                for (const[key, value] of Object.entries(dicti)){
+                    if (lett == key.toLowerCase()){
+                        alert(key + " for " + value);
+                    }
+                }
+            }
+            
+        </script>
+        
+        <p align = "center">
+            <button class = "button" onclick = "chimp()">Submit</button>
+        </p>
+
+
+    </body>
+</html>
