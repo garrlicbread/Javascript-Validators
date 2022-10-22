@@ -28,6 +28,8 @@ https://user-images.githubusercontent.com/64068083/197337886-77889cef-a6a2-40f6-
 
 7. Demonstrate the use of rollover buttons using JavaScript.
 
-[Videos/Rollover.mp4](https://github.com/garrlicbread/Javascript-Validators/blob/main/Videos/Rollover.mp4)
+![Rollover](https://user-images.githubusercontent.com/64068083/197339006-8c0c30fd-e199-48c8-b8bd-911a56b01b90.gif)
 
 8. Perform Form Validation using HTML and JavaScript.
+
+![form-validation](https://user-images.githubusercontent.com/64068083/197339186-b6519c28-bc1c-4ecd-aa65-8bb1dba95b5c.gif)
