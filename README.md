@@ -2,6 +2,8 @@
 This repository has all the codes and demo videos of PHP Assignment 2 as directed by Dr. Prashasti Singh.
 This readme file includes the question as well as a short video demonstrating the code.
 
+The orginal videos can be downloaded from the Videos folder.
+
 1. Demonstrate the use of buttons and alert boxes using Javascript.
 
 [![](Videos//Buttons_and_alert_boxes.mp4 ) ](https://user-images.githubusercontent.com/64068083/197337554-8ae132fd-67a7-499e-a571-9d073c4fb6df.mp4)
